@@ -19,16 +19,9 @@ const list = [
   }
 ];
 
-function App() {
+function TodoList (){
   return (
-  <div>
-    <h1>Hello to my website</h1>
-      
-    <label htmlFor = "search"> Search: </label>
-    <input id = "search" type = "text" />
-
-      <hr />
-      <ul>
+    <ul>
       {list.map(function (item) {
         return(
         <li key={item.objectID}>
@@ -42,6 +35,29 @@ function App() {
       );
       })}
       </ul>
+  )
+}
+
+function Search (){
+  return(
+    <div>
+      <label htmlFor = "search"> Search: </label>
+      <input id = "search" type = "text" />
+    </div>
+  )
+}
+
+function App() {
+  return (
+  <div>
+    <h1>Hello to my website</h1>
+    <Search />
+    <Search />
+
+      <hr />
+      <TodoList />
+      <TodoList />
+      
     </div >
   );
 }
