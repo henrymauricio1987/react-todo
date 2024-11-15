@@ -1,64 +1,103 @@
+// import * as React from 'react';
+
+// const todoList = [
+//   {
+//     title: 'The React Task 1.1',
+//     id: 1,
+//   },
+//   {
+//     title: 'Submission Task 1.1',
+//     id: 2,
+//   },
+// ];
+
+// function TodoList (){
+//   return (
+//     <ul>
+//       {todoList.map(function (item) {
+//         return(
+//         <li key={item.objectID}>
+//           <span>
+//             <a href={item.url}>{item.title}</a>
+//           </span>
+//           <span>{item.author}</span>
+//           <span>{item.num_comments}</span>
+//           <span>{item.points}</span>
+//         </li>
+//       );
+//       })}
+//       </ul>
+//   )
+// }
+
+// function Search (){
+//   return(
+//     <div>
+//       <label htmlFor = "search"> Search: </label>
+//       <input id = "search" type = "text" />
+//     </div>
+//   )
+// }
+
+// function App() {
+//   return (
+//   <div>
+//     <h1>Todo List</h1>
+//     <Search />
+//     <Search />
+
+//       <hr />
+//       <TodoList />
+//       <TodoList />
+      
+//     </div >
+//   );
+// }
+
+// export default App;
+
 import * as React from 'react';
 
-const list = [
+// Create an empty todoList array with at least 3 objects
+const todoList = [
   {
-    title: 'React',
-    url: 'https://reactjs.org/',
-    author: 'Jordan Walke',
-    num_comments: 3,
-    points: 4,
-    ObjectID: 0,
+    id: 1,
+    title: 'Complete assignment for React class'
   },
   {
-    title: 'ReDUX',
-    url: 'https://rEDUX.JS.org/',
-    author: 'Dan Abramov, Andrew Clark',
-    num_comments: 2,
-    points: 5,
-    ObjectID: 1,
+    id: 2,
+    title: 'Submit project proposal'
+  },
+  {
+    id: 3,
+    title: 'Buy groceries'
   }
 ];
 
-function TodoList (){
+// TodoList component that renders the list of todos
+function TodoList() {
   return (
     <ul>
-      {list.map(function (item) {
-        return(
-        <li key={item.objectID}>
-          <span>
-            <a href={item.url}>{item.title}</a>
-          </span>
-          <span>{item.author}</span>
-          <span>{item.num_comments}</span>
-          <span>{item.points}</span>
-        </li>
-      );
+      {todoList.map(function(item) {
+        // For each item, return a <li> with the unique key and title
+        return (
+          <li key={item.id}>
+            {item.title}
+          </li>
+        );
       })}
-      </ul>
-  )
+    </ul>
+  );
 }
 
-function Search (){
-  return(
-    <div>
-      <label htmlFor = "search"> Search: </label>
-      <input id = "search" type = "text" />
-    </div>
-  )
-}
-
+// App component where the TodoList will be displayed
 function App() {
   return (
-  <div>
-    <h1>Hello to my website</h1>
-    <Search />
-    <Search />
-
-      <hr />
+    <div>
+      <h1>Todo List</h1>
       <TodoList />
-      <TodoList />
-      
-    </div >
+      <h4><i>Henry Osorio</i></h4>
+    </div>
   );
 }
 
