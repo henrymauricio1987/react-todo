@@ -59,6 +59,9 @@
 import * as React from 'react';
 import TodoList from './TodoList';
 import AddTodoForm from './AddTodoForm'
+import Search from './Search';
+
+
 // import AddTodoForm from './AddTodoForm'
 
 // Create an empty todoList array with at least 3 objects
@@ -97,14 +100,20 @@ import AddTodoForm from './AddTodoForm'
 
 // App component where the TodoList will be displayed
 function App() {
+  
   return (
+    
     <div>
       <h1>Todo List</h1>
       <TodoList />
       <AddTodoForm />
+      <Search />
       {/* <AddTodoForm /> */}
      
       <h4><i>Henry Osorio</i></h4>
+      
+
+
     </div>
     
   );
