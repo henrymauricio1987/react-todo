@@ -56,10 +56,10 @@
 
 // export default App;
 
-import * as React from 'react';
-import TodoList from './TodoList';
-import AddTodoForm from './AddTodoForm'
-import Search from './Search';
+// import * as React from 'react';
+// import TodoList from './TodoList';
+// import AddTodoForm from './AddTodoForm'
+// import Search from './Search';
 
 
 // import AddTodoForm from './AddTodoForm'
@@ -99,23 +99,50 @@ import Search from './Search';
 
 
 // App component where the TodoList will be displayed
-function App() {
+// function App() {
   
-  return (
+//   return (
     
-    <div>
-      <h1>Todo List</h1>
-      <TodoList />
-      <AddTodoForm />
-      <Search />
-      {/* <AddTodoForm /> */}
+//     <div>
+//       <h1>Todo List</h1>
+//       <TodoList />
+//       <AddTodoForm />
+//       <Search />
+//       {/* <AddTodoForm /> */}
      
-      <h4><i>Henry Osorio</i></h4>
+//       <h4><i>Henry Osorio</i></h4>
       
 
 
-    </div>
+//     </div>
     
+//   );
+// }
+
+// export default App;
+
+// src/App.jsx
+import * as React from 'react';
+import TodoList from './TodoList';
+import AddTodoForm from './AddTodoForm';
+import Search from './Search';
+
+function App() {
+  // Crear estado para almacenar el nuevo todo
+  const [newTodo, setNewTodo] = React.useState('');  // Estado para el nuevo todo
+
+  return (
+    <div>
+      <h1>Todo List</h1>
+      <TodoList />
+      <AddTodoForm onAddTodo={setNewTodo} /> {/* Pasamos la función setNewTodo */}
+      <Search />
+      
+      {/* Mostrar el valor de newTodo debajo del formulario */}
+      <p>{newTodo}</p>
+
+      <h4><i>Henry Osorio</i></h4>
+    </div>
   );
 }
 
