@@ -2,7 +2,7 @@
 import * as React from 'react';
 import TodoList from './TodoList';
 import AddTodoForm from './AddTodoForm';
-import Search from './Search';
+import Search from './search';
 
 function App() {
   // Crear estado para almacenar el nuevo todo
