@@ -9,13 +9,13 @@ function Search() {
         setQuery(newQuery);
 
         // You can implement search logic here
-        console.log("Searching for:", newQuery);
+        console.log("Searching for: ", newQuery);
     };
 
     return (
         <div>
             <p>This is an example of an event</p>
-            <label htmlFor="search">Search</label>
+            <label htmlFor="search">Search: </label>
             <input 
                 id="search" 
                 type="text" 

@@ -19,7 +19,7 @@ function AddTodoForm({ onAddTodo }) {  // Aceptamos onAddTodo como prop
 
     return (
         <form onSubmit={handleAddTodo}>
-            <label htmlFor="todoTitle">Title</label>
+            <label htmlFor="todoTitle">Title: </label>
             <input 
                 type="text" 
                 id="todoTitle" 
@@ -27,9 +27,8 @@ function AddTodoForm({ onAddTodo }) {  // Aceptamos onAddTodo como prop
             />
             <button type="submit">Add</button>
         </form>
+        
     );
 }
-
-
 
 export default AddTodoForm;
