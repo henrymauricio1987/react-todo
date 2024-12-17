@@ -15,7 +15,7 @@ function Search() {
     return (
         <div>
             <p>This is an example of an event</p>
-            <label htmlFor="search">Search: </label>
+            <label htmlFor="search">Search your deliver: </label>
             <input 
                 id="search" 
                 type="text" 
