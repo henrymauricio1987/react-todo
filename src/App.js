@@ -11,7 +11,8 @@ function App() {
 
   return (
     <div>
-      <h1>Todo List</h1>
+      <h1>Edcode</h1>
+      <h2>Education and Computational Thinking </h2>
       <TodoList />
       <AddTodoForm onAddTodo={setNewTodo} /> {/* Pasamos la función setNewTodo */}
       <AddTodoForm onAddTodo={setNewTodo1} /> {/* Pasamos la función setNewTodo */}
