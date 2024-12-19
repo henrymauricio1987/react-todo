@@ -6,7 +6,7 @@ function AddTodoForm({ onAddTodo }) {  // Aceptamos onAddTodo como prop
     // Función para manejar el envío del formulario
     const handleAddTodo = (event) => {
         event.preventDefault();  // Prevenir el comportamiento predeterminado del formulario
-
+        console.log({ event })
         // Obtener el valor del input
         const todoTitle = event.target.todoTitle.value;
 
@@ -20,14 +20,14 @@ function AddTodoForm({ onAddTodo }) {  // Aceptamos onAddTodo como prop
     return (
         <form onSubmit={handleAddTodo}>
             <label htmlFor="todoTitle">Title: </label>
-            <input 
-                type="text" 
-                id="todoTitle" 
-                name="title" 
+            <input
+                type="text"
+                id="todoTitle"
+                name="title"
             />
             <button type="submit">Add</button>
         </form>
-        
+
     );
 }
 

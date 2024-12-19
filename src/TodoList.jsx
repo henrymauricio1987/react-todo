@@ -24,6 +24,7 @@ const todoList = [
 function TodoList () {
     return (
         <ul>
+        
           {todoList.map(function(item) {
             // For each item, return a <li> with the unique key and title
             return (

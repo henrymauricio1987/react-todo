@@ -2,10 +2,12 @@
 import * as React from 'react';
 import TodoList from './TodoList';
 import AddTodoForm from './AddTodoForm';
+//question
 import Search from './Search';
 
 function App() {
   // Crear estado para almacenar el nuevo todo
+  //question 1
   const [newTodo, setNewTodo] = React.useState('');  // Estado para el nuevo todo
   const [newTodo1, setNewTodo1] = React.useState('');  // Estado para el nuevo todo
 
@@ -14,13 +16,14 @@ function App() {
       <h1>Edcode</h1>
       <h2>Education and Computational Thinking </h2>
       <TodoList />
+      //question
       <AddTodoForm onAddTodo={setNewTodo} /> {/* Pasamos la función setNewTodo */}
       <AddTodoForm onAddTodo={setNewTodo1} /> {/* Pasamos la función setNewTodo */}
-      <Search />
-      
+      <Search {...{ newTodo, setNewTodo }} />
+
       {/* Mostrar el valor de newTodo debajo del formulario */}
-      <p>{newTodo}</p>
-      <p>{newTodo1}</p>
+      <p>newTodo: {newTodo}</p>
+      <p>newTodo1: {newTodo1}</p>
 
       <h4><i>Henry Osorio</i></h4>
     </div>
