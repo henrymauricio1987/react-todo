@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 
 function AddTodoForm({ onAddTodo }) {  // Aceptamos onAddTodo como prop

@@ -1,8 +1,6 @@
-
 import * as React from 'react';
 import TodoList from './TodoList';
 import AddTodoForm from './AddTodoForm';
-//question
 import Search from './Search';
 
 function App() {
@@ -16,8 +14,8 @@ function App() {
       <h1>Edcode</h1>
       <h2>Education and Computational Thinking </h2>
       <TodoList />
-      //question
-      <AddTodoForm onAddTodo={setNewTodo} /> {/* Pasamos la función setNewTodo */}
+
+      <AddTodoForm onAddTodo={f} /> {/* Pasamos la función setNewTodo */}
       <AddTodoForm onAddTodo={setNewTodo1} /> {/* Pasamos la función setNewTodo */}
       <Search {...{ newTodo, setNewTodo }} />
 
@@ -25,6 +23,7 @@ function App() {
       <p>newTodo: {newTodo}</p>
       <p>newTodo1: {newTodo1}</p>
 
+      <h4><i>Edcode</i></h4>
       <h4><i>Henry Osorio</i></h4>
     </div>
   );
