@@ -5,23 +5,29 @@ import Search from './Search';
 
 function App() {
   // Crear estado para almacenar el nuevo todo
-  //question 1
-  const [newTodo, setNewTodo] = React.useState('');  // Estado para el nuevo todo
-  const [newTodo1, setNewTodo1] = React.useState('');  // Estado para el nuevo todo
+  const [newTodo, setNewTodo] = React.useState('');  // Este es el estado para el nuevo todo
+
+  // Declarar estado para la lista de todos
+  // Crear una nueva variable de estado denominada todoListcon setTodoListel valor setter y predeterminado de una matriz vacía
+  const [todoList, setTodoList] = React.useState([]);
+
+  // Función para agregar una nueva tarea, Declarar una nueva función llamada addTodoque toma newTodocomo parámetro
+  const addTodo = (newTodo) => {
+    setTodoList((prevTodoList) => [...prevTodoList, newTodo]); // Agregar el nuevo todo a la lista
+  };
 
   return (
     <div>
       <h1>Edcode</h1>
       <h2>Education and Computational Thinking </h2>
-      <TodoList />
 
-      <AddTodoForm onAddTodo={f} /> {/* Pasamos la función setNewTodo */}
-      <AddTodoForm onAddTodo={setNewTodo1} /> {/* Pasamos la función setNewTodo */}
-      <Search {...{ newTodo, setNewTodo }} />
+      {/* Pasar todoList el estado como una propiedad nombrada todoList al TodoListcomponente */}
+      <TodoList todoList={todoList} /> {/* Pasar la lista de tareas como prop */}
 
-      {/* Mostrar el valor de newTodo debajo del formulario */}
-      <p>newTodo: {newTodo}</p>
-      <p>newTodo1: {newTodo1}</p>
+      <AddTodoForm onAddTodo={addTodo} /> {/* Pasar la función addTodo como prop */}
+
+      <h1>Search your course online</h1>
+      <Search newTodo={newTodo} setNewTodo={setNewTodo} />
 
       <h4><i>Edcode</i></h4>
       <h4><i>Henry Osorio</i></h4>
